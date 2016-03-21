@@ -4,7 +4,7 @@
   "author": "Tobias Koppers @sokra",
   "description": "Serves a webpack app. Updates the browser on changes.",
   "peerDependencies": {
-    "webpack": ">=2.0.3-beta <3"
+    "webpack": "^2.1.0-beta.4"
   },
   "dependencies": {
     "compression": "^1.5.2",
@@ -18,7 +18,7 @@
     "stream-cache": "~0.0.1",
     "strip-ansi": "^3.0.0",
     "supports-color": "^3.1.1",
-    "webpack-dev-middleware": "^1.4.0",
+    "webpack-dev-middleware": "callahad/webpack-dev-middleware#allow-webpack2-betas",
     "yargs": "^3.32.0"
   },
   "devDependencies": {
@@ -34,7 +34,7 @@
     "less-loader": "~2.2.0",
     "style-loader": "~0.13.0",
     "url-loader": "~0.5.6",
-    "webpack": "^1.12.1"
+    "webpack": "^2.1.0-beta.4"
   },
   "license": "MIT",
   "repository": {
@@ -51,7 +51,7 @@
     "ssl/"
   ],
   "scripts": {
-    "prepublish": "webpack ./client/live.js client/live.bundle.js --colors --config client/webpack.config.js -p && webpack ./client/index.js client/index.bundle.js --colors --config client/webpack.config.js -p",
+    "prepublish": "webpack ./client/live.js client/live.bundle.js --config client/webpack.config.js -p && webpack ./client/index.js client/index.bundle.js --config client/webpack.config.js -p",
     "lint": "eslint lib test",
     "beautify-lint": "beautify-lint lib/**.js bin/**.js",
     "beautify": "beautify-rewrite lib/**.js bin/**.js",

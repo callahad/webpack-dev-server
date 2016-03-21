@@ -1,4 +1,4 @@
-var $ = require("jquery");
+var $ = require("./web_modules/jquery");
 var SockJS = require("sockjs-client");
 var stripAnsi = require('strip-ansi');
 require("./style.css");
